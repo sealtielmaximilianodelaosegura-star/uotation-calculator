@@ -1,0 +1,125 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --success: #10b981;
+    --error: #ef4444;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #0f172a;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0f172a;
+        --card-bg: #1e293b;
+        --text: #f8fafc;
+        --border: #334155;
+    }
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0; padding: 20px;
+    display: flex; justify-content: center;
+}
+
+.container { width: 100%; max-width: 500px; }
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+}
+
+header { text-align: center; margin-bottom: 2rem; }
+.logo-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+.subtitle { color: var(--text-light); font-size: 0.9rem; margin: 0; }
+
+.form-group { margin-bottom: 1.25rem; position: relative; }
+label { display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.85rem; }
+
+input, select {
+    width: 100%; padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* 🔧 Estado de Error Visual */
+input.error, select.error {
+    border-color: var(--error);
+    background-color: rgba(239, 68, 68, 0.02);
+}
+
+.error-msg {
+    color: var(--error);
+    font-size: 0.75rem;
+    margin-top: 5px;
+    font-weight: 600;
+    display: none;
+}
+
+.btn-primary {
+    width: 100%; padding: 14px;
+    background: var(--primary);
+    color: white; border: none; border-radius: 8px;
+    font-weight: bold; cursor: pointer;
+    display: flex; justify-content: center; align-items: center; gap: 10px;
+    transition: transform 0.1s, background 0.2s;
+}
+
+.btn-primary:active { transform: scale(0.98); }
+
+/* 🔧 Animación suave al mostrar resumen */
+.resumen-container {
+    display: none;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: var(--radius);
+    background: linear-gradient(to bottom right, rgba(37, 99, 235, 0.05), transparent);
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.resumen-header { border-bottom: 1px solid var(--border); margin-bottom: 1rem; padding-bottom: 0.5rem; }
+.row { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+.total { font-size: 1.4rem; font-weight: 800; color: var(--primary); border-top: 2px solid var(--border); padding-top: 0.8rem; margin-top: 0.8rem; }
+.text-success { color: var(--success); font-weight: 600; }
+
+.actions {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 1.5rem;
+}
+
+.btn-secondary {
+    padding: 12px; border: 1px solid var(--border);
+    background: var(--card-bg); color: var(--text);
+    border-radius: 8px; cursor: pointer;
+    display: flex; justify-content: center; align-items: center; gap: 8px;
+}
+
+.btn-ws { color: var(--success); border-color: var(--success); }
+.btn-ws:hover { background: rgba(16, 185, 129, 0.05); }
