@@ -1,5 +1,3 @@
-Copia y pega esto tal cual en README.md 👇
-
 🧮 Quotation Calculator
 
 A clean, responsive quotation calculator built with HTML, CSS, and JavaScript, designed to help freelancers and small businesses quickly estimate project costs in a clear and professional way.
