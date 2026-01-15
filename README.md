@@ -46,13 +46,6 @@ It can be adapted for:
 
 ---
 
-## 📸 Preview
-
-You can view the live version here:  
-👉 https://sealtielmaximilianodelaosegura-star.github.io/quotation-calculator/
-
----
-
 ## 🚀 How to Use
 
 ### Online
