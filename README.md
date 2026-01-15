@@ -3,7 +3,7 @@
 A clean, responsive **quotation calculator** built with **HTML, CSS, and JavaScript**, designed to help freelancers and small businesses quickly estimate project costs in a clear and professional way.
 
 🔗 **Live Demo**  
-👉 https://sealtielmaximilianodelaosegura-star.github.io/quotation-calculator/
+👉 https://sealtielmaximilianodelaosegura-star.github.io/Quotation-calculator/
 
 ---
 
